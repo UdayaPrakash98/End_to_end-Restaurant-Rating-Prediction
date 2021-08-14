@@ -29,9 +29,9 @@ learning algorithms that’s best fit for the above case.</p> <pre>
 <li> Data Exploration     : I started exploring dataset using pandas,numpy,matplotlib and seaborn. </li>
 <li> Data visualization   : Ploted graphs and bars to get insights about dependend and independed variables. </li>
 <li> Feature Engineering  : 1.Removed missing values and created new features as per insights.
-                          2.perform label encoding to change categorical variables into numerical ones</li>
+                           perform label encoding to change categorical variables into numerical ones</li>
 <li> Model Selection I    : 1.Execution of  models to check the base accuracy.
-                          2.Also find residual and R2 to check whether a model is a good fit or not.</li>
+                           Also find residual and R2 to check whether a model is a good fit or not.</li>
 <li> Pickle File          : Selected model as per best accuracy and created pickle file .</li>
 <li> Webpage & deployment : Created a Flask application that takes all the necessary inputs from user and shows output.
                             After that I have deployed project on heroku and AWS service</li></pre>
