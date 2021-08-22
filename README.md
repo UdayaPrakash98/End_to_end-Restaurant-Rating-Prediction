@@ -67,5 +67,5 @@ App Service Application URL:  </p>
 ## Quick tip for prefer EDA : 
 <p>just use for fast EDA process to view your datasets dont dependnt on it </p>
 <p>import pandas_profiling</p>
-<p>data.profile_report</p>
+<p>pandas_profiling.ProfileReport(data)</p>
 
