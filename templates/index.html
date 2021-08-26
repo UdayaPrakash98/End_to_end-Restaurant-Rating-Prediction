@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Restaurant Rating Prediction</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+</head>
+
+<body>
+
+<img src=
+"https://th.bing.com/th/id/R.c0686526e331557639a775a2a7718570?rik=M3khNSfzcxnn6Q&riu=http%3a%2f%2famac.us%2fwp-content%2fuploads%2f2012%2f12%2frating.jpg&ehk=mQqLQ30mmvDNR2te%2fkw1ynhkI0hUudE91Gbw3qAkteQ%3d&risl=&pid=ImgRaw&r=0"
+     alt="Rating", width="250", height="150", style="float:left">
+
+<img src=
+"https://th.bing.com/th/id/OIP.W1n4NZ13bcw4Rqy19aKgEwHaFF?w=262&h=180&c=7&o=5&pid=1.7"
+         alt="zomato image", width="250", height="120", style="float:right">
+<style>
+body {
+    background-image: url("https://cdn.pixabay.com/photo/2012/02/22/19/28/africa-15428__340.jpg");
+    #background-image: url("https://images.pexels.com/photos/4577179/pexels-photo-4577179.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-position:150;
+    background-size:cover;
+}
+</style>
+<style>
+  .login {
+	position:fixed;
+	top:30%;
+	left:45%;
+	margin: -200px 0 0 -150px;
+	width:400px;
+	height:300px;
+  }
+  body {
+	width: 100%;
+	height:100%;
+	text-align:initial;
+  }
+ </style>
+<style>
+  table{
+    font-size: 12px;
+    box-shadow: 2px 2px 30px #333333;
+    padding: 15px;
+    background-color: #560909;
+    width: 350px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    border-bottom-style: solid;
+    border-color: #cb202d;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+</style>
+
+  <div class="login">
+	<h1>Predict Zomato Restaurant Ratings</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="Online Order" placeholder="Order Online" required="required" />
+        <input type="text" name="Book Table" placeholder="Book Table" required="required" />
+		<input type="text" name="Votes" placeholder="Votes" required="required" />
+        <input type="text" name="Location" placeholder="Location" required="required" />
+        <input type="text" name="Restaurant Type" placeholder="Restaurant Type" required="required" />
+        <input type="text" name="Cuisines" placeholder="Cuisines" required="required" />
+        <input type="text" name="Cost" placeholder="Cost" required="required" />
+        <input type="text" name="Menu Item" placeholder="Menu Item" required="required" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict Rating</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+<div class = "legend">
+  <table>
+<tr><td class = "heading">Online Order:</td><td>YES=1 and NO =0</td></tr><br>
+<tr><td class = "heading">Book Table:</td><td>Yes=1 and NO=0</td></tr><br>
+<tr><td class = "heading">Votes:</td><td>Fill No of votes the restaurant should get or got from customers </td></tr><br>
+<tr><td class = "heading">Location:</td><td>Locations are marked with different Integers(1,2,3,..n) around the city of Bangalore</td></tr><br>
+<tr><td class = "heading">Restaurent type:</td><td>Restaurant types is filled with numerical types with dataset names</td></tr><br>
+<tr><td class = "heading">Cuisines:</td><td>Method of cooking in particular restaurant is filled with numerical types for names in datsets</td></tr><br>
+<tr><td class = "heading">Cost:</td><td>Cost per two person in a Restaurant</td></tr><br>
+<tr><td class = "heading">Menu items:</td><td>Menu items are filled in restaurant here filled with specific numbers to specify such items (many items concern)</td></tr><br>
+
+</table>
+</div>
+
+</body>
+</html>

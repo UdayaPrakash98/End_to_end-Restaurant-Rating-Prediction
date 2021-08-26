@@ -1,0 +1,7 @@
+Model Names,Accuracy socre
+Linear Reg,25.157231872146813
+RandomForest Reg,81.44841552801995
+Support Vector Reg,29.49650664430893
+Bayesin Ridge,25.16044827622984
+Extra tree Reg,88.43574251505811
+Ridge Reg,25.157422442766254
