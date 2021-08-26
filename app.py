@@ -4,7 +4,7 @@ import pickle
 import _pickle as cPickle
 import logging
 import bz2
-from flask_cors import CORS, cross_origin
+#from flask_cors import CORS, cross_origin
 logging.basicConfig(level=logging.INFO, format = '%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger=logging.getLogger()
 
@@ -14,13 +14,13 @@ model=cPickle.load(Dfile)
 
 
 @app.route('/')
-@cross_origin()
+#@cross_origin()
 def home():
     app.logger.info("index page is being called")
     return render_template('index.html')
 
 @app.route('/predict',methods=['POST'])
-@cross_origin()
+#@cross_origin()
 def predict():
     try:
        app.logger.info("values are received from user as list")
