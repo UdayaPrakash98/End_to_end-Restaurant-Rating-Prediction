@@ -55,7 +55,7 @@ learning algorithms that’s best fit for the above case.</p> <pre>
 
 
 ## Deployment Links:
-<p> Link Heroku :  <br>
+<p> Link Heroku : <a href="https://rating-prediction.herokuapp.com/" <br>
 App Service Application URL:  </p>
 
 </pre>
