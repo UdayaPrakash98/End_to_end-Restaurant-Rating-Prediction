@@ -1,7 +1,7 @@
 import numpy as np
 from flask import Flask, request, jsonify, render_template
 import pickle
-import _pickle as cPickle
+import pickle as cPickle
 import logging
 import bz2
 #from flask_cors import CORS, cross_origin
